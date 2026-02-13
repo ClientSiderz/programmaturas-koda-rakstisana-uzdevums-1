@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario's Pizza | Home</title>
+    <title>Itāliešu stūris | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -21,89 +22,117 @@
 </head>
 <body class="text-pizzaDark font-sans max-w-5xl mx-auto border-x border-gray-200 min-h-screen flex flex-col">
 
-    <header class="flex justify-between items-center p-6 border-b border-gray-300 sticky top-0 bg-white z-10">
-        <div class="text-3xl font-bold tracking-wider text-pizzaRed">PIZZA LOGO</div>
-        <nav>
-            <ul class="flex space-x-6 font-semibold text-sm">
-                <li><a href="#home" class="hover:text-pizzaRed transition-colors">HOME</a></li>
-                <li><a href="#menu" class="hover:text-pizzaRed transition-colors">MENU</a></li>
-                <li><a href="#contact" class="hover:text-pizzaRed transition-colors">CONTACT</a></li>
+<header class="flex justify-between items-center p-6 border-b border-gray-300 sticky top-0 bg-white z-20 italic">
+    <div class="text-3xl tracking-wider text-pizzaRed">itāliešu stūris</div>
+    <nav>
+        <ul class="flex space-x-6 font-semibold text-sm">
+            <li><a href="#home" class="hover:text-pizzaRed transition-colors">mājaslapa</a></li>
+            <li><a href="#menu" class="hover:text-pizzaRed transition-colors">ēdienkarte</a></li>
+            <li><a href="#contact" class="hover:text-pizzaRed transition-colors">kontakti</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="flex-grow">
+
+    <section id="home" class="h-[450px] bg-pizzaLight border-b border-gray-300 relative overflow-hidden flex items-center justify-center">
+        <img
+                src="assets/header.jpg"
+                alt="Garda pica"
+                class="absolute inset-0 w-full h-full object-cover"
+        >
+        <div class="absolute inset-0 bg-black/40"></div> <div class="relative z-10 text-center">
+        <h1 class="text-white text-5xl font-bold uppercase tracking-widest drop-shadow-lg mb-4">
+            Autentiska pica
+        </h1>
+        <p class="text-white text-lg italic">Svaigi cepta mūsu krāsnī</p>
+    </div>
+    </section>
+
+    <section class="text-center py-12 border-b border-gray-300 px-6">
+        <h2 class="text-2xl font-bold mb-6 uppercase tracking-wide">Welcome to our Pizzeria</h2>
+        <a href="#menu" class="inline-block bg-gray-200 border border-gray-400 text-pizzaDark font-bold py-2 px-8 uppercase hover:bg-pizzaRed hover:text-white hover:border-pizzaRed transition-colors">
+            Pasūtīt tagad!
+        </a>
+    </section>
+
+    <section id="menu" class="py-10 px-6 border-b border-gray-300 scroll-mt-24">
+        <h2 class="text-xl font-bold uppercase mb-2">Īpašie piedāvājumi</h2>
+        <hr class="border-t-2 border-gray-200 mb-6">
+
+        <div class="flex flex-col md:flex-row gap-6 justify-between">
+            <div class="flex-1 border border-gray-300 group cursor-pointer overflow-hidden bg-white">
+                <img src="assets/menu/pepperoni-pizza.jpeg" alt="Pepperoni Pizza" class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 border-t border-gray-300">
+                    <h3 class="font-semibold text-pizzaDark">Pepperoni pica</h3>
+                </div>
+            </div>
+
+            <div class="flex-1 border border-gray-300 group cursor-pointer overflow-hidden bg-white">
+                <img src="assets/menu/margarita-pizza.jpg" alt="Margherita Pizza" class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 border-t border-gray-300">
+                    <h3 class="font-semibold text-pizzaDark">Margherita pica</h3>
+                </div>
+            </div>
+
+            <div class="flex-1 border border-gray-300 group cursor-pointer overflow-hidden bg-white">
+                <img src="assets/menu/bbq-chicken-pizza.png" alt="BBQ Chicken Pizza" class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="p-4 border-t border-gray-300">
+                    <h3 class="font-semibold text-pizzaDark">BBQ vistas pica</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 px-6 border-b border-gray-300">
+        <h2 class="text-xl font-bold uppercase mb-2">Galerija</h2>
+        <hr class="border-t-2 border-gray-200 mb-6">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <img src="assets/menu/tonno-pizza.jpg" alt="Tonno pica" class="border border-gray-300 h-40 w-full object-cover">
+            <img src="assets/menu/margarita-pizza.jpg" alt="Margarita pica" class="border border-gray-300 h-40 w-full object-cover">
+            <img src="assets/menu/sicilian-pizza.jpg" alt="Sicilian pica" class="border border-gray-300 h-40 w-full object-cover">
+        </div>
+    </section>
+
+    <section id="contact" class="py-10 px-6 flex flex-col md:flex-row justify-between scroll-mt-24">
+        <div class="flex-1 md:pr-10">
+            <h2 class="text-xl font-bold uppercase mb-2">Kontaktējaties ar mums!</h2>
+            <hr class="border-t-2 border-gray-200 mb-6">
+            <ul class="space-y-2 text-sm">
+                <li><strong>Adrese:</strong> Ābolu iela 7, Riga</li>
+                <li><strong>Telefons:</strong> +371 67 225 432</li>
+                <li><strong>E-Pasts:</strong> support@italian-square.lv</li>
             </ul>
-        </nav>
-    </header>
+        </div>
 
-    <main class="flex-grow">
-        <section id="home" class="h-80 bg-pizzaLight border-b border-gray-300 flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                <span class="text-gray-500 font-semibold text-xl border-t border-b border-gray-400 py-4 px-12 transform -rotate-12 w-[150%] text-center opacity-50">
-                    HEADER IMAGE (Pizza Photo)
-                </span>
-            </div>
-        </section>
+        <div class="hidden md:block w-px bg-gray-300 mx-6"></div>
 
-        <section class="text-center py-12 border-b border-gray-300 px-6">
-            <h1 class="text-2xl font-bold mb-6 uppercase tracking-wide">Welcome to our Pizzeria</h1>
-            <a href="#menu" class="inline-block bg-gray-200 border border-gray-400 text-pizzaDark font-bold py-2 px-8 uppercase hover:bg-pizzaRed hover:text-white hover:border-pizzaRed transition-colors">
-                Order Now
-            </a>
-        </section>
-
-        <section id="menu" class="py-10 px-6 border-b border-gray-300 scroll-mt-24">
-            <h2 class="text-xl font-bold uppercase mb-2">Our Specials</h2>
+        <div class="flex-1 md:pl-10 mt-8 md:mt-0">
+            <h2 class="text-xl font-bold uppercase mb-2">Sekojiet mūs!</h2>
             <hr class="border-t-2 border-gray-200 mb-6">
-            
-            <div class="flex flex-col md:flex-row gap-6 justify-between">
-                <div class="bg-pizzaLight border border-gray-300 h-40 flex-1 flex items-center justify-center hover:shadow-lg transition-shadow">
-                    <h3 class="font-semibold text-gray-600">Pepperoni Pizza</h3>
-                </div>
-                <div class="bg-pizzaLight border border-gray-300 h-40 flex-1 flex items-center justify-center hover:shadow-lg transition-shadow">
-                    <h3 class="font-semibold text-gray-600">Margherita Pizza</h3>
-                </div>
-                <div class="bg-pizzaLight border border-gray-300 h-40 flex-1 flex items-center justify-center hover:shadow-lg transition-shadow">
-                    <h3 class="font-semibold text-gray-600">BBQ Chicken Pizza</h3>
-                </div>
+            <div class="flex space-x-4">
+                <a href="#" class="w-10 h-10 border border-gray-400 flex items-center justify-center hover:bg-pizzaRed hover:text-white hover:border-pizzaRed transition-colors">
+                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="w-10 h-10 border border-gray-400 flex items-center justify-center hover:bg-pizzaRed hover:text-white hover:border-pizzaRed transition-colors">
+                    <i data-lucide="twitter" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="w-10 h-10 border border-gray-400 flex items-center justify-center hover:bg-pizzaRed hover:text-white hover:border-pizzaRed transition-colors">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
             </div>
-        </section>
+        </div>
 
-        <section class="py-10 px-6 border-b border-gray-300">
-            <h2 class="text-xl font-bold uppercase mb-2">Gallery</h2>
-            <hr class="border-t-2 border-gray-200 mb-6">
-            
-            <div class="flex flex-col md:flex-row gap-6 justify-between">
-                <img src="assets/menu/tonno-pizza.jpg" alt="Tonno pica" class="border border-gray-300 h-40 w-full object-cover">
-                <img src="assets/menu/margarita-pizza.jpg" alt="Margarita pica" class="border border-gray-300 h-40 w-full object-cover">
-                <img src="assets/menu/sicilian-pizza.jpg" alt="Sicilian pica" class="border border-gray-300 h-40 w-full object-cover">
-            </div>
-        </section>
+        <script>
+            lucide.createIcons();
+        </script>
+    </section>
+</main>
 
-        <section id="contact" class="py-10 px-6 flex flex-col md:flex-row justify-between scroll-mt-24">
-            <div class="flex-1 md:pr-10">
-                <h2 class="text-xl font-bold uppercase mb-2">Contact Us</h2>
-                <hr class="border-t-2 border-gray-200 mb-6">
-                <ul class="space-y-2 text-sm">
-                    <li><strong>Address:</strong> 123 Pizza Street, Riga</li>
-                    <li><strong>Phone:</strong> +371 20 000 000</li>
-                    <li><strong>Email:</strong> hello@mariospizza.lv</li>
-                </ul>
-            </div>
-            
-            <div class="hidden md:block w-px bg-gray-300 mx-6"></div>
-
-            <div class="flex-1 md:pl-10 mt-8 md:mt-0">
-                <h2 class="text-xl font-bold uppercase mb-2">Follow Us</h2>
-                <hr class="border-t-2 border-gray-200 mb-6">
-                <div class="flex space-x-4">
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-400 flex items-center justify-center font-bold hover:bg-pizzaRed hover:text-white hover:border-pizzaRed transition-colors">FB</a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-400 flex items-center justify-center font-bold hover:bg-pizzaRed hover:text-white hover:border-pizzaRed transition-colors">TW</a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-400 flex items-center justify-center font-bold hover:bg-pizzaRed hover:text-white hover:border-pizzaRed transition-colors">IG</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-pizzaLight border-t border-gray-300 py-4 text-center text-sm text-gray-600">
-        <p>&copy; 2026 Mario's Pizza. All rights reserved.</p>
-    </footer>
+<footer class="bg-pizzaLight border-t border-gray-300 py-6 text-center text-sm text-gray-600">
+    <p>&copy; 2026 Itāliešu stūris.</p>
+</footer>
 
 </body>
 </html>
